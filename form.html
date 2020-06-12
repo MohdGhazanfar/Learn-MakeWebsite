@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+</head>
+<body>
+	<h1>HTML Forms</h1>
+	<ul>
+		<li><a href="intro">Introduction</a></li>
+		<li><a href="formWorking">How a form works?</a></li>
+		<li><a href="textInput">Text Input</a></li>
+		<li><a href="">Password Input</a></li>
+		<li><a href="">Number Input</a></li>
+		<li><a href="">Range Input</a></li>
+		<li><a href="">Checkbox Input</a></li>
+		<li><a href="">Radio Button Input</a></li>
+		<li><a href="">Dropdown List</a></li>
+		<li><a href="">Details Input</a></li>
+		<li><a href="">Textarea Element</a></li>
+		<li><a href="">Submit Form</a></li>
+	</ul>
+
+	<div id="intro">
+		<h2>Introduction</h2>
+		<p>Just like a physical form, an HTML <i>form</i> element is responsible for collecting information to send somewhere else.</p>	
+	</div>
+	
+	<div id="formWorking">
+		<h2>How a Form works?</h2>
+		<p>We can think of the internet as a network of computers which send and receive information.</p> <p>Computers need an <i>HTTP</i> request to know how to communicate. The HTTP request instructs the receiving computer how to handle the incoming information.</p>
+
+		<p>The <i>form</i> element is a great tool for collecting information, but then we need to send that information somewhere else for processing. We need to supply the <i>form</i> element with both the location of where the <i>form</i>'s information goes and what HTTP request to make. Take a look at the sample <i>form</i> below: </p>
+		<b>&lt;form action="/example.html" method="POST"&gt;
+	&lt;/form&gt;</b>
+
+		<p>In the above example, we’ve created the skeleton for a &lt;form&gt; that will send information to <b>example.html</b> as a POST request:</p>
+		<ul>
+			<li>The <b>action</b> attribute determines where the information is sent.</li>
+			<li>The <b>method</b> attribute is assigned a HTTP verb that is included in the HTTP request. </li>
+		</ul>
+		<p>There are two types of method attributes: <b>POST</b> & <b>GET</b></p>
+		<h4>POST vs GET</h4>
+		<p>Both GET and POST method is used to transfer data from client to server in HTTP protocol but Main difference between POST and GET method is that GET carries request parameter appended in URL string while POST carries request parameter in message body which makes it more secure way of transferring data from client to server in http protocol.</p>		
+	</div>
+	
+	<div id="textInput">
+		<h2>Text Input</h2>
+		<p>If we want to create an input field in our &lt;form&gt;, we’ll need the help of the &lt;input&gt; element. </p>
+		<p>The &lt;input&gt; element has a type attribute which determines how it renders on the web page and what kind of data it can accept. </p>
+		<p>When we create an &lt;input&gt; element with type="text", it renders a text field that users can type into. It’s also important that we include a name attribute for the &lt;input&gt; — without the name attribute, information in the &lt;input&gt; won’t be sent when the &lt;form&gt; is submitted. </p>	
+
+		<form method="post" action="http://server1">
+			<h4>Text based Form input:</h5>
+			Enter your name:
+			<input type="text" name="fname">
+			<br/>
+			Enter your age:
+			<input type="text" name="age">
+			<br/>
+			<input type="submit" name="Submit">
+		</form>
+
+		<p>After users type into the &lt;input&gt; element, the <b>value</b> of the value attribute becomes what is typed into the text field. The value of the <b>value</b> attribute is paired with the value of the <b>name</b> attribute and sent as text when the form is submitted. For instance, if a user typed in "Tommy Shelby” in the text field created by our &lt;input&gt; element:</p>
+
+		<form action="/example.html" method="POST">
+			<input type="text" name="full-name" value="Tommy Shelby">
+		</form>
+
+		<p>When the form is submitted, the text: <b>"full-name=Tommy Shelby"</b> is sent to <b>/example.html</b> because the value of the <b>name</b> attribute is <b>"full-name"</b> and the value of value is <b>"Tommy Shelby"</b>. </p>
+
+		<h3>Labels: Adding a Label</h3>
+		<p>For a user to properly identify an &lt;input&gt; we use the appropriately named &lt;input&gt; element. </p>
+		<p>To associate a &lt;label&gt; and an &lt;input&gt;, the &lt;input&gt; needs an id attribute. We then assign the for attribute of the &lt;label&gt; element with the value of the id attribute of &lt;input&gt;</p>
+		<form action="/example.html" method="POST">
+			<label for="meal">What do you want to eat?</label>
+			<br>
+			<input type="text" name="food" id="meal">
+		</form>
+	</div>
+	
+
+
+	<br>
+	<br>
+	<br>
+	<form method="post" action="http://server1">
+		<label for="fname">First name:</label>
+		<input type="text" name="fname" id="fname"><br>
+
+		<input type="checkbox" name="vehicle" value="Bike"> I own a bike
+	</form>
+	<br>
+	<form>
+		<select name="rental-option">
+			<option value="small">Small</option>
+			<option value="family">Family Sedan</option>			
+			<option value="lux">Luxury</option>
+			<br><br/>
+			<input type="submit" name="Submit">
+			<br/>
+		</select>
+	</form>
+
+	<form method="post" action="https://gangang">
+		<input list="ide">
+
+		<datalist id="ide">
+			<option value="Visual Studio Code"></option>
+			<option value="Atom"></option>
+			<option value="Sublime text"></option>
+		</datalist>
+		<textarea rows="10" cols="30" name="comment"></textarea>
+	</form>
+	<form method="get" action="">
+		<input type="checkbox" name="breakfast" value="bacon">Bacon 🥓<br>
+		<input type="checkbox" name="breakfast" value="eggs">Eggs 🍳<br>
+		<input type="checkbox" name="breakfast" value="pancakes">Pancakes 🥞<br>
+
+		<input name="delivery_option" type="radio" value="pickup" />
+		<input name="delivery_option" type="radio" value="delivery" />
+		
+	</form>
+
+</body>
+</html>

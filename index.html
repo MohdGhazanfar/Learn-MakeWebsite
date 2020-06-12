@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<!-- This is my first written HTML code. -->
+
+<head>
+	<title>Mohammad Ghazanfar</title>
+</head>
+
+<body>
+	<a href="">Home</a>
+	<a href="">Projects</a>
+	<a href="">Services</a>
+	<a href="./HTML_Notes.html" target="_blank">HTML Notes</a>
+	<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">HTML Elements Reference</a>
+	<a href="">Contact</a>
+
+
+	<h1>Mohammad Ghazanfar</h1>
+
+	<ul>
+			<li><a href="#intro">Intro</a></li>
+			<li><a href="#goal">Goal</a></li>	
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#jobs">Jobs</a></li>
+			<li><a href="#media">Media</a></li>
+	</ul>
+
+	<div id="intro">
+		<h2>About Me</h2>
+		<p>I am 28yrs old with interests in web development. This is a static website to learn HTML.</p>
+	</div>
+
+	<h2>Goal</h2>
+
+	<dir id="goal">
+			<li>Complete Web Development course on CodeAcademy by 30th June'20</li>
+			<li>Able to create my own website</li>
+			<li>Get a Job</li>
+	</dir>
+
+	<div id="skills">
+		<h3>Skills</h3>
+		<ol>
+			<li>HTML</li>
+			<li>JavaScript</li>
+			<li>Web Design</li>
+			<li>Command Line</li>
+			<li>Git</li>
+			<li>Front-end</li>
+			<li>React</li>
+			<li>Backend</li>
+			<li>Node.js</li>
+			<li>Middleware</li>
+			<li>SQL</li>
+			<li>API</li>
+			<li>Test-Driven Development (TDD) with JS</li>
+			<li>Mocha</li>
+			<li>Bootstrap</li>
+			<li>CSS</li>
+		</ol>
+	</div>
+
+	<div id="jobs">
+		<h3>Jobs</h3>
+		<p>Places applied to: </p>
+		<ol>
+			<li>NBK</li>
+		</ol>
+	</div>
+
+	<form action="check.html" method="GET">
+		<label for="guess"> Enter a number between 1-10:</label>
+		<br>
+		<input type="number" name="guess" id="guess" min="1" max="10" required>
+		<br>
+		<input type="submit" id="submission" value="Submit">
+	</form>
+
+	 <section class="overlay">
+			<h1>Sign Up</h1>
+      <p>Create an account:</p>
+      <form action="submission.html" method="GET">
+        <label for="username">Username:</label>
+        <br>
+				<input id="username" name="username" type="text" required minlength="3" maxlength="15">
+        <br>
+        <label for="pw">Password:</label>
+        <br>
+        <!--Add the pattern attribute to the input below-->
+				<input id="pw" name="pw" type="password" required minlength="8" maxlength="15">
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+
+
+	<div id="media">
+		<h3>Media</h3>
+		<img src="img01.jpg" width="240" height="240" alt="Selfie of me"/>
+		<video src="https://content.codecademy.com/courses/freelance-1/unit-1/lesson-2/htmlcss1-vid_brown-bear.mp4" width="320" height="240" controls>
+	</div>
+
+</body>
+</html>

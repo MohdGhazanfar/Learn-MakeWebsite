@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Notes</title>
+</head>
+<body>
+	<header><h1>HTML Notes</h1></header>
+	<div id="contents">
+		<p>Things covered:</p>
+		<ol>
+			<li>Doctyoe</li>
+			<li>Head</li>
+			<li>Body</li>
+			<li>Element Tags</li>
+		</ol>
+	</div>
+	<div id="DOCTYPE">
+		<h2>Doctype</h2>
+		<p>We start a website code by  "!DOCTYPE html" tag, so that the browser knows your code is HTML and its version. It's considered good practice.</p>
+		<p>We then add "html" tag which will contain rest of the code.</p>
+	</div>
+	<div id="head">
+		<h2>Head</h2>
+		<i><p>Notes about Head</p></i>
+		<p>Before the body of the HTML code, we insert the "head" tag, to provide some browser page information aka metadata of a webpage, such as the "title". The "title" tag will display name of the browser, hence the title.</p>
+	</div>
+	<div id="body">
+		<h2>Body</h2>
+		<i><p>Notes about Body</p></i>
+			<p>We use divisions to basically create sections. <span>A span element is used to ensure text in same line and not a division.</span><br>.<br>.<br>.<br>We can use 'br' for a line break. This provides a line.<br> Using "ul" elment i.e. unordered list tag, provided indentation. Using this with "li" i.e. list item tag will bullet point it or basically describe an item in a list.</p>
+			<p>To create a hyperlink, we use the anchor element tag "a". The source of link is provided in the opening tag with use of href="". Following the opening tag, we can write a refrence for the link like I have done for HTML_Notes.</p>
+			<p>For any links to open on a new tab, we use the "target" attribute that requires a value of "_blank. This is done following the source link that is provided for the "href=".</p>
+	</div>
+	<div id="Linking pages">
+		<h2>Links</h2>
+		<h3>Linking to Relative Page</h3>
+		<p>Many sites also link to internal web pages like Home, About, and Contact.</p>
+		<p>When making multi-page static websites, web developers often store HTML files in the root directory, or a main folder where all the files for the project are stored. As the size of the projects you create grows, you may use additional folders within the main project folder to organize your code. </p>
+		<p>project-folder/ <br>
+|—— about.html <br>
+|—— contact.html <br>
+|—— index.html</p>
+		<p>The example above shows three different files — <b>
+		about.html</b>, <b>contact.html</b>, and <b>index.html</b> in one folder.</p>
+		<p>HTML files are often stored in the same folder, as shown in the example above. If the browser is currently displaying <b>index.html</b>, it also knows that <b>about.html</b> and <b>contact.html</b> are in the same folder. Because the files are stored in the same folder, we can link web pages together using a relative path.</p>
+		<p> href="./contact.html</p>
+		<p> Anchor tag "a" is used with a relative path to link from the current HTML file to the <b>contact.html</b> in the same folder. On the webpage, <u>Contact</u> will apear as a link.</p>
+		<p><b>NOTE:</b> A relative path is a filename that shows the path to a local file (a file on the same website, such as ./index.html) versus an absolute path (a full URL, like https://www.codecademy.com/learn/learn-html which is stored in a different folder). The ./ in ./index.html tells the browser to look for the file in the current folder. </p>
+
+	</div>
+	<div id="table">
+		<h2>Tables</h2>
+		<h3>To Create a Table</h3>
+		<p>To create a table we use the "table" element.</p>
+		<p>In HTML, we have to add rows or initiate it to be able to add any data, and to do that we use the <i>table row</i> element: "tr".</p>
+		<p>Rows aren't sufficient to add data to a table. Each cell element must also be defined. For that, we use the <i>table data</i> element: "td".</p>
+		<p>Table headings or titles can be added using the <i>table heading</i> element: "th".</p>
+		<p><b>Note:</b> the use of "scope" attribute can take two values: "row" & "col".</p>
+		<ul>
+			<li>row: this value makes it clear that the heading is a row</li>
+			<li>col: this valkues makes it clear that the heading is a column</li>
+		</ul>
+		<table>
+			<tr>
+				<th scope="col">Column 1</th>
+				<th scope="col">Column 2</th>
+			</tr>
+			<tr>
+				<td>cell 1</td>
+				<td>cell 2</td>
+			</tr>
+		</table>
+		<br>
+		<table border="1">
+			<tr>
+				<th></th> <!-- Row 1 -->
+				<th scope="col">Saturday</th>
+				<th scope="col">Sunday</th>
+				<th scope="col">Monday</th>
+			</tr>
+			<tr> <!-- Row 2 -->
+				<th scope="row">Temperature</th>
+				<td>22</td>
+				<td>24</td>
+				<td>23</td>
+			</tr>
+			<tr> <!-- Row 3 -->
+				<th scope="row">Temperature</th>
+				<td>25</td>
+				<td>24</td>
+				<td>24</td>
+			</tr>
+		</table>
+	</div>
+	<div id="tableBorder">
+		<h3>Table Border</h3>
+		<p>To add a table border we need to use CSS, as it helps to separate the structure of a page from how it looks. The old HTML would use the "border" attribute but should be avoided. In the example below, I have used just to show but shouldn't be used.</p>
+		<table border="2">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Name</th>
+				<th scope="col">Marks</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Sam</td>
+				<td>78</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Tom</td>
+				<td>90</td>
+			</tr>
+		</table>
+	</div>
+	<div id="spanningColumns">
+		<h3>Spanning Columns</h3>
+		<p>We can use the "colspan" attribute when suppose in a table that contains data that spans multiple columns.</p>
+		<p>Accepts an integer (greater than or equal to 1) to denote the number of columns it spans across.</p>
+		<p>An example: a personal calendar could have events that span across multiple hours, or even multiple days</p>
+
+		<table border="1">
+			<tr>
+				<th>Company Name</th>
+     		    <th>Number of Items to Ship</th>
+      			<th>Next Action</th>
+			</tr>
+			<tr>
+		        <td colspan="2">Adam's Greenworks</td>
+      			<td>14</td>
+      			<td>Package Items</td>
+    		</tr>
+    		<tr>
+     	    	<td>Davie's Burgers</td>
+   			    <td>2</td>
+      			<td>Send Invoice</td>
+    		</tr>
+		    <tr>
+			    <td>Baker's Bike Shop</td>
+			    <td>3</td>
+			    <td>Send Invoice</td>
+		    </tr>
+		</table>
+		
+	</div>
+	<div id="spanningRows">
+		<h3>Spanning Rows</h3>
+		<p>We can use the "rowspan" attribute when suppose in a table that contains data that spans multiple rows.</p>
+		<p>Accepts an integer (greater than or equal to 1) to denote the number of rows it spans across.</p>
+		<p>An example: perhaps an event goes on for further hours on a certain day.</p>
+		<table border="1">
+			<tr>
+				<th>Company Name</th>
+     		    <th>Number of Items to Ship</th>
+      			<th>Next Action</th>
+			</tr>
+			<tr>
+		        <td colspan="2">Adam's Greenworks</td>
+      			<td>14</td>
+      			<td>Package Items</td>
+    		</tr>
+    		<tr>
+     	    	<td>Davie's Burgers</td>
+   			    <td>2</td>
+      			<td rowspan="2">Send Invoice</td>
+    		</tr>
+		    <tr>
+			    <td>Baker's Bike Shop</td>
+			    <td>3</td>
+			    <td>Send Invoice</td>
+		    </tr>
+		</table>
+	</div>
+	<div id="tableBody">
+		<h3>Table Body</h3>
+		<p>A table can grow and contain a lot of data and become very long. In order to manage this, we section it off by using the <i>table body</i> element "tbody".</p>
+		<p>The "tbody" element should contain all of the table's data, excluding the table table heading.</p>
+	</div>
+	<div id="tableHead">
+		<h3>Table Head</h3>
+		<p>We section of the table head by using "thead" element.</p>
+	</div>
+	<div id="tableFoot">
+		<h3>Table Footer</h3>
+		<p>We section of the table footer by using "tfoot" element.</p>
+	</div>
+	<div id="formValidation">
+		<h2>Form Validation</h2>
+		<p>Validation is the concept of checking user provided data against the required data. There are two types of validation: </p>
+		<ol>
+			<li>Server-side validation</li>
+			<li>Client-side validation</li>
+		</ol>
+		<p><b>Server-side Validation:</b> happens when data is sent to another machine (typically a server) for validation. An example of this type of validation is the usage of a login page. The form on the login page accepts username and password input, then sends the data to a server that checks that the pair matches up correctly. </p>
+		<p><b>Client-side validation:</b> if we want to check the data on the browser (the client). This validation occurs before data is sent to the server. Different browsers implement client-side validation differently, but it leads to the same outcome.</p>
+	</div>
+	<div id="Element Tags">
+		<h2>Element Tags</h2>
+		<p>Some of the element tags we have covered so far:</p>
+		<ol>
+			<li>Headers</li>
+			<li>Paragraph</li>
+			<li>ID</li>
+			<li>Italics</li>
+			<li>Bold</li>
+			<li>Ordered Lists</li>
+			<li>Unordered Lists</li>
+			<li>Line Break</li>
+			<li>Anchor/Hyperlinks</li>
+		</ol>
+	</div>
+</body>
+</html>

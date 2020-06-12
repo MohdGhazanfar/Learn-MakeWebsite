@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+	<html>
+		
+		<head>
+			<title>Semantic HTML</title>
+		</head>
+
+		<body>
+			<!-- Header section -->
+			<header>
+				<h1>Navigational Links</h1>
+				<nav>
+					<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#contact">Contact Us</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Main section -->	
+			<main>
+				<header>
+					<h1>Types of Sports</h1>
+				</header>
+				<article>
+					<h3>Baseball</h3>
+					<p>The first game of baseball was played in Cooperstown, New York in the summer of 1839.</p>
+				</article>
+
+				<section>
+					
+					<article>
+						<h2>Section Tag</h2>
+
+						<p>Section tags can define elements in a document, such as chapters, headings, or any other area of the document with the same theme.</p>
+						
+						<p>Example: content with the same theme such as articles about cricket can a single "section". A website's home page could be split into sections for the introduction, news items, and contact information.</p>
+					
+						<h2>Article Section</h2>
+						
+						<p>The "artitcle" element holds content that makes sense on its own. "Article" can hold conent such as article, blogs, comments, magazines, etc.</p>
+						
+						<p>An <i>article</i> tag would help someone using a screen reader understand where the article content (that might containt a combination of text, images, audio, etc.) begings and ends.</p>
+					
+
+						<h3>The Aside Element</h3>
+						<p>The <i>aside</i> element is used to mark additional information that can enhance element but isn't required in order to understand the main content. This element can be used alongside other elements such as <i>article</i> or <i>section</i>.</p>
+
+						<p>Some common uses of the "aside" element are for: </p>
+						<ul>
+							<li>Bibliographies</li>
+							<li>Endnotes</li>
+							<li>Comments</li>
+							<li>Pull quotes</li>
+							<li>Editorial sidebars</li>
+							<li>Additional information</li>
+						</ul>
+
+						<h3>Figure and Figcaption</h3>
+						<p><i>Figure</i> is an element used to encapsulate media such as image, illustation, diagram, code snippet, etc. We use <i>figure</i> element to encapsulate our <i>img</i> tag.</p>
+						<p>To add a caption to the image, we use <i>figcaption</i> element. The caption will go inside the "figure", which is different to using "p" element to describe the content.</p>
+
+						<h3>Audio and Attributes</h3>
+						<p>We use the <i>audio</i> element to embed audio content into a document. We also use attributes to the "audio" tag to be able to have any controls. </p>
+						<p>List of attributes can be found: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#Attributes">Mozzila</a></p>
+
+						<audio controls>
+           					<source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
+        				 </audio>
+      					
+      					<h3>Video and Embed</h3>
+      					<h4>Video</h4>
+      					<p>We can use the <i>media</i> element for videos or pictures, but by using a <i>video</i> element, it makes it clear that the a developer is attempting to display a video to the user.</p>
+						<p>We use the <i>video</i> element to embed video content into a document. We also use attributes to the "video" tag to be able to have any controls. </p>
+						<p>Some attributes that can alter a video playback incl: controls, autoplay, loop, etc.</p>
+
+						  <video src="https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4" controls width="400" height="400">Video not supported</video>
+
+						  <h4>Embed</h4>
+						  <p>We can use the <i>embed</i> tag, which can embed any media content including videos, audio files, and gifs from an external source. This also means that websites that have an embed button have some form of media content that can be added to other websites.</p>
+						  <p><b>Note: </b>Embed is a self-closing tag, unlike video.</p>
+
+						  <embed src="https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif"></embed>
+
+
+					</article>
+					
+				</section>
+			</main>	
+			<!-- Footer section -->
+			<footer>
+				<p>For technical support or bugs, contact: support@internet.org</p>
+			</footer>
+		</body>
+		
+	</html>
